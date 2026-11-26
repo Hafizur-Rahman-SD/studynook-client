@@ -2,7 +2,7 @@
 
 StudyNook is a full-stack modern web application where students and library patrons can browse, search, filter, and book private study rooms by the hour. The platform features automated time-conflict detection to eliminate double-booking, empowers room owners to manage their listings with full CRUD operations, and provides every registered user with a dashboard to track and cancel upcoming bookings.
 
-**Live Website:** [Pending Deployment / https://studynook-client.vercel.app](https://studynook-client.vercel.app)  
+**Live Website:** [https://client-azure-six-45.vercel.app](https://client-azure-six-45.vercel.app)  
 **Backend API:** [https://studynook-server-1240.onrender.com](https://studynook-server-1240.onrender.com)  
 **Developer:** [Hafizur Rahman](https://portfolio-website-blue-seven-66.vercel.app/) | [GitHub Profile](https://github.com/Hafizur-Rahman-SD) | `hafizurrahman5004@gmail.com` | `+880 1605-135004`
 
