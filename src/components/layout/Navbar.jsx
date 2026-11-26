@@ -18,8 +18,20 @@ export default function Navbar() {
         <Link className="brand" to="/" onClick={close}>StudyNook</Link>
         <button className="menu-button" type="button" aria-label="Open navigation" aria-expanded={open} onClick={() => setOpen(v => !v)}>☰</button>
         <nav className={`nav-links ${open ? 'nav-open' : ''}`} aria-label="Main navigation">
-          <NavLink to="/" onClick={close}>Home</NavLink><NavLink to="/rooms" onClick={close}>Rooms</NavLink>
-          {user && <><NavLink to="/add-room" onClick={close}>Add Room</NavLink><NavLink to="/my-listings" onClick={close}>My Listings</NavLink><NavLink to="/my-bookings" onClick={close}>My Bookings</NavLink></>}
+          <NavLink to="/" onClick={close}>Home</NavLink>
+          <NavLink to="/rooms" onClick={close}>Rooms</NavLink>
+          {user ? (
+            <>
+              <NavLink to="/add-room" onClick={close}>Add Room</NavLink>
+              <NavLink to="/my-listings" onClick={close}>My Listings</NavLink>
+              <NavLink to="/my-bookings" onClick={close}>My Bookings</NavLink>
+            </>
+          ) : (
+            <div className="mobile-auth-links">
+              <Link to="/login" onClick={close}><Button variant="secondary" style={{ width: '100%' }}>Login</Button></Link>
+              <Link to="/register" onClick={close}><Button style={{ width: '100%' }}>Register</Button></Link>
+            </div>
+          )}
         </nav>
         <div className="nav-actions">
           <button className="theme-button" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}>{theme === 'light' ? '☾' : '☀'}</button>
